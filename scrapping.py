@@ -1,19 +1,24 @@
+"""Collecte les données de mon master et les stockes dans une db sqlite."""
+
 import requests
 import db
 
 
-def get_data(recherche: str | None = None):
+def get_data(
+    recherche: str | None = None,
+    mentions: list = [
+        "Informatique",
+        "Intelligence artificielle",
+        "Science des données",
+    ],
+):
     headers = {}
     params = {
         "size": "5000",
         "page": "0",
     }
 
-    json_data = {
-        "mentions": ["Informatique", 
-                     "Intelligence artificielle", 
-                     "Science des données"]
-    }
+    json_data = {"mentions": mentions}
 
     if recherche:
         json_data["recherche"] = recherche

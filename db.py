@@ -1,3 +1,5 @@
+"""Création des tables."""
+
 import sqlite3
 
 FORMATION = """

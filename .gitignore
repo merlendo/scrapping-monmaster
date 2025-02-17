@@ -1,5 +1,5 @@
 **/__pycache__
 .DS_Store
 *.db
-index.html
+*.html
 example.json
